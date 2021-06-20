@@ -6,18 +6,23 @@ public class TablaVerdad
 	public static void main(String[] args)
 	{
 		 String proposicion;
+		 int control=0;
 		 boolean p=true, q=true;
 		Scanner objLeer = new Scanner (System.in);
 		TablaVerdad objLlamar=  new TablaVerdad();
 		
 		System.out.println("<<<<<<BIENVENIDO>>>>>>");
-		System.out.println("Para esta tabla de la verdad utilice la siguiente simbología\n"
+		System.out.println("Para esta tabla de la verdad utilice la siguiente simbologÃ­a\n"
 				+ "Para las Variables utilice las letras 'p' y 'q'\n"
 				+ "Para la Conjuncion utilice: '^'\n"
-				+ "Para la Distunción utilice 'v'\n"
+				+ "Para la DistunciÃ³n utilice 'v'\n"
 				+ "Para el Si...Entonces utilice '->'\n"
-				+ "Para el Si Y Solo Si utilice '<->'");
-		System.out.println("|Ingrese la proposición|");
+				+ "Para el Si Y Solo Si utilice '<->'\n"
+				+ "Para la NegaciÃ³n utilice '!'\n"
+				+ "Utilice los parentesis donde sea conveniente\n"
+				+ "EJEMPLO:!(p->q)");
+		do {
+		System.out.println("|Ingrese la proposiciÃ³n|");
 		proposicion=objLeer.next();
 		System.out.println("|  p\t|  q\t| "+proposicion+"\t|");
 		System.out.println("---------------------------");
@@ -206,6 +211,11 @@ public class TablaVerdad
 						p=false;q=false;
 						System.out.println("| "+p+"\t| "+q+"\t| "+objLlamar.metodoSoloSi(p, q)+" | ");
 					}
+		System.out.println("Si desea continuar ingrese 0\n"
+				+ "Si desea salir ingese 1\n");
+		control=objLeer.nextInt();
+		}while(control==0);
+		
 		
 
 	}
