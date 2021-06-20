@@ -15,7 +15,7 @@ public class TablaVerdad
 		System.out.println("Para esta tabla de la verdad utilice la siguiente simbología\n"
 				+ "Para las Variables utilice las letras 'p' y 'q'\n"
 				+ "Para la Conjuncion utilice: '^'\n"
-				+ "Para la Distunción utilice 'v'\n"
+				+ "Para la Disyunción utilice 'v'\n"
 				+ "Para el Si...Entonces utilice '->'\n"
 				+ "Para el Si Y Solo Si utilice '<->'\n"
 				+ "Para la Negación utilice '!'\n"
